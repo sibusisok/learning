@@ -5,7 +5,7 @@ use std::time::{Duration, Instant};
 
 fn main() {
     println!("Timer application started!");
-    println!("Timer will trigger every 5 minutes.");
+    println!("Timer will trigger every 1 minutes.");
     println!("Type 'terminate' and press Enter to stop the application.\n");
 
     // Shared flag to signal termination
@@ -14,7 +14,7 @@ fn main() {
 
     // Start the timer thread
     let timer_thread = thread::spawn(move || {
-        let timer_duration = Duration::from_secs(5 * 60); // 5 minutes
+        let timer_duration = Duration::from_secs(1 * 60); // 5 minutes
         let mut last_trigger = Instant::now();
 
         loop {
